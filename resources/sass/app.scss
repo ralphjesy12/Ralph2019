@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Khula:300,400,600,700,800');
 
 // Variables
 @import 'variables';
@@ -8,7 +8,52 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.mh-100v{
+    min-height: 100vh;
+}
+
+#app{
+    .img-avatar{
+        height: 12em;
+    }
+}
+
+#main-menu{
+    .nav-item{
+        .nav-link{
+            font-size: 5em;
+            font-weight: 800;
+            line-height: 1em;
+            position: relative;
+            transition: color 200ms ease;
+            color: rgba(0,0,0,1);
+            &:after{
+                content: "";
+                height: 0.15em;
+                width: 0%;
+                transition: all 200ms ease;
+                background: rgba(64, 64, 64, 0);
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &:hover{
+        .nav-item{
+            .nav-link{
+                color: rgba(64,64,64,0.5);
+                &:hover,&:active{
+                    color: rgba(64,64,64,1);
+                    &:after{
+                        background: rgba(64, 64, 64, 0.5);
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
