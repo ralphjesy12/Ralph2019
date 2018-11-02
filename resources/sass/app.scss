@@ -16,6 +16,9 @@
     .img-avatar{
         height: 12em;
     }
+    .img-avatar-mini{
+        height: 6em;
+    }
 }
 
 #main-menu{
@@ -39,6 +42,14 @@
                 right: 0;
                 opacity: 0.5;
             }
+
+            &.active{
+                color: rgba(64,64,64,1);
+                &:after{
+                    background: rgba(64, 64, 64, 0.5);
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -55,5 +66,106 @@
                 }
             }
         }
+    }
+}
+
+$toggler-width : 50px;
+$patty-height : 4px;
+$patty-color : #000;
+$patty-transition-speed: 250ms;
+$patty-transition: ease-in-out;
+
+.toggle-burger{
+    display: block;
+    margin: 2em 1em;
+    width: $toggler-width;
+    position: fixed;
+    z-index: 10000;
+
+    &:before,&:after{
+        content: "";
+        display: block;
+        width: $toggler-width;
+        height: $patty-height;
+        background: $patty-color;
+        border-radius: $patty-height;
+        transition: all $patty-transition-speed $patty-transition;
+        margin: 0 auto;
+    }
+    &:before{
+        margin-bottom: 10px;
+    }
+    &:after{
+        margin-top: 10px;
+    }
+    .patty{
+        display: block;
+        width: $toggler-width * 0.8;
+        height: $patty-height;
+        background: $patty-color;
+        transition: width $patty-transition-speed $patty-transition;
+        margin: 0 auto;
+        border-radius: $patty-height;
+    }
+
+    &:hover{
+        .patty,&:before,&:after{
+            width: $toggler-width * 0.9;
+        }
+    }
+
+    &.active{
+        .patty{
+            width: 0;
+        }
+        &:before{
+            transform: translateY(14px) rotate(45deg);
+        }
+        &:after{
+            transform: translateY(-14px) rotate(-45deg);
+        }
+    }
+}
+
+.mobile-menu{
+
+    @media screen and (max-width: 767px){
+        display: table !important;
+        top: -100vh;
+        position: fixed;
+        width: 100vw;
+        left: 0;
+        height: 100vh;
+        background: #fff;
+        z-index: 999;
+        opacity: 0;
+        transition: all $patty-transition-speed $patty-transition;
+        .img-avatar-mini{
+            display: none;
+        }
+        .nav{
+            text-align: center!important;
+            margin: 0 2em;
+        }
+    }
+    &.active{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.menu-avatar{
+    position: fixed;
+    right: 0;
+    margin: 2em 1em;
+    z-index: 1000;
+    opacity: 0;
+    transition: all $patty-transition-speed $patty-transition;
+    &.active{
+        opacity: 1;
+    }
+    .img-avatar-mini{
+        width: $toggler-width!important;
+        height: auto!important;
     }
 }
