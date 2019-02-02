@@ -12,3 +12,5 @@
 */
 Route::view('/','home.welcome');
 Route::view('about','home.about');
+Route::view('contact','home.contact');
+Route::get('recaptcha/verify','HomeController@verify');

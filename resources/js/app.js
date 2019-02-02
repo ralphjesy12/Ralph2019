@@ -26,6 +26,6 @@ const app = new Vue({
     $('.toggle-burger').click(function(){
         $(this).toggleClass('active');
         $('.mobile-menu').toggleClass('active');
-        $('.menu-avatar').toggleClass('active'); 
+        $('.menu-avatar').toggleClass('active');
     });
 })(jQuery)

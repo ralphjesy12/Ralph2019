@@ -1,12 +1,21 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Khula:300,400,600,700,800');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+html,body{
+    font-family: 'Futura';
+    font-weight: 500;
+    font-style: normal;
+}
+
+a{
+    text-decoration: underline;
+}
 
 .mh-100v{
     min-height: 100vh;
@@ -30,6 +39,7 @@
             position: relative;
             transition: color 200ms ease;
             color: rgba(0,0,0,1);
+            text-decoration: none;
             &:after{
                 content: "";
                 height: 0.15em;
@@ -168,4 +178,9 @@ $patty-transition: ease-in-out;
         width: $toggler-width!important;
         height: auto!important;
     }
+}
+
+.mxh-100{
+    max-height: 100vh;
+    overflow: auto;
 }
