@@ -12,8 +12,8 @@
             <div class="col-md-6 order-md-1">
                 <div class="d-table mh-100v">
                     <div class="d-table-cell align-middle">
-                        <div class="mxh-100  py-5">
-                            <h1>oh! hello there.</h1>
+                        <div class="mxh-100 py-5">
+                            <h1 class="mt-5">oh! hello there.</h1>
                             <p>
                                 I'm Ralph John Galindo, a self-proclaimed Web Artisan from Imus, Philippines living in Manila, where I work as a Developer in a Digital Agency. With a background in programming, my strength lies in building apps and websites.
                             </p>
@@ -63,7 +63,7 @@
                             <hr />
 
                             <h1>Want to know more about me?</h1>
-                            <p>
+                            <p class="mb-5">
                                 <a href="/contact">Ask</a> anything you like. It would be my pleasure.<br>
                             </p>
 

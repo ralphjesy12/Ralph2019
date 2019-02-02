@@ -15,7 +15,7 @@
                         <p>
                             from the Philippines living in Manila, where I work as a Developer in a Digital Agency. With a huge background in programming, my strength lies in building apps and websites.
                         </p>
-                        <a href="#" class="btn btn-primary text-uppercase">
+                        <a href="/work" class="btn btn-primary text-uppercase">
                             Check what i do
                         </a>
                     </div>

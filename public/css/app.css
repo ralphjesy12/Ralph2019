@@ -11218,6 +11218,7 @@ a {
 
 #app .img-avatar-mini {
   height: 6em;
+  max-width: 500px;
 }
 
 #main-menu .nav-item .nav-link {

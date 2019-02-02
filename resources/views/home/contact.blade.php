@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div id="app" class="container">
         <div class="row">
             <div class="col-md-6 order-md-2">
                 @include('partials.home-menu',[
@@ -12,7 +12,7 @@
             <div class="col-md-6 order-md-1">
                 <div class="d-table mh-100v">
                     <div class="d-table-cell align-middle">
-                        <div class="mxh-100  py-5">
+                        <div class="mxh-100 px-3 py-5">
                             @php
                             use Faker\Generator as Faker;
                             use Faker\Provider\Internet as Internet;
@@ -116,13 +116,13 @@
 
 
                                                 <label for="mce-EMAIL">Your Email</label>
-                                                <input type="email" aria-describedby="your-email-help" value="{{ $faker->unique()->freeEmail }}" name="EMAIL" class="form-control email" id="mce-EMAIL">
+                                                <input type="email" aria-describedby="your-email-help" value="{{ $faker->unique()->freeEmail }}" name="EMAIL" class="form-control email" id="mce-EMAIL" required>
                                                 <small id="your-email-help" class="form-text text-muted">So i can say hello, when you say hi ...</small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="your-email">Your Question</label>
-                                                <textarea class="form-control" placeholder="C'mon! I know you're a conversation starter, right?" rows="7" name="MESSAGE" id="mce-MESSAGE">{!! $faker->randomElement($questions) !!}</textarea>
-                                                <small id="your-email-help" class="form-text text-muted"><a href="/contact">Click here, if you can't think of anything to ask</a></small>
+                                                <textarea class="form-control" placeholder="C'mon! I know you're a conversation starter, right?" rows="7" name="MESSAGE" id="mce-MESSAGE" required>{!! $faker->randomElement($questions) !!}</textarea>
+                                                <small id="your-email-help" class="form-text text-muted"><a href="/contact">Click here, if you're not sure what to ask</a></small>
                                             </div>
                                             <div class="form-group">
                                                 <div id="mce-responses" class="clear">
